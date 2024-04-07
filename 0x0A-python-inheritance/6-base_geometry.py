@@ -1,9 +1,16 @@
 #!/usr/bin/python3
-""" Module 6-base_geometry"""
+"""
+This program have an incompleted class
+"""
 
 
-class BaseGeometry:
-        """Class BaseGeometry"""
-            def area(self):
-                        """Area method"""
-                                raise Exception('area() is not implemented')
+class BaseGeometry():
+    """
+    This class contain a method not implemented
+    """
+
+    def area(self):
+        """
+        This function raise an exception
+        """
+        raise Exception('area() is not implemented')

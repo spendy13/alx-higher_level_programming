@@ -1,20 +1,14 @@
 #!/usr/bin/python3
-"""Module 100-my_int"""
+"""This program create a new int called MyInt and is rebel!!!"""
 
 
 class MyInt(int):
-        """Class MyInt"""
+    """Class MyInt is like an int but Rebel"""
 
-            def __init__(self, value):
-                        """Init method"""
-                                self.value = value
+    def __eq__(self, other_num):
+        """Rebel!!! equal is not equal"""
+        return super().__ne__(other_num)
 
-                                    def __eq__(self, other):
-                                                """Rebel equal"""
-                                                        if isinstance(other, MyInt):
-                                                                        return self.value == other.value
-                                                                            return False
-
-                                                                            def __ne__(self, other):
-                                                                                        """Rebel not equal"""
-                                                                                                return not self.__eq__(other)
+    def __ne__(self, other_num):
+        """Rebel!!! not equal is equal"""
+        return super().__eq__(other_num)

@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""Module 2-is_same_class"""
+"""
+This program validate if the obj is the same with other class
+"""
 
 
 def is_same_class(obj, a_class):
-    """Check if an obj is an instance"""
+    """
+    This function validate if obj is the same class of a_clas
+    Args:
+      - obj
+      - a_class
+    """
     return type(obj) == a_class

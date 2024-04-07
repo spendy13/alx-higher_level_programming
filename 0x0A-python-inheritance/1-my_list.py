@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Module 1"""
+"""
+This program creates a class called MyList that inherits of the class List
+"""
 
 
 class MyList(list):
-        """Class MyList"""
-            def print_sorted(self):
-                        """Print a sorted list"""
-                                tmp = self.copy()
-                                        print(sorted(tmp))
+    """
+    This class inherits form the class list an can print it's elements sorted
+    """
+
+    def print_sorted(self):
+        print(sorted(self))

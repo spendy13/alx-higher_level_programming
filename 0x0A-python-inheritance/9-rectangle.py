@@ -1,36 +1,28 @@
 #!/usr/bin/python3
-"""Module 9-base_geometry"""
+"""
+This program use the inherit for create a new Rectangle
+"""
 
 
-class BaseGeometry:
-        """Class BaseGeometry"""
-            def area(self):
-                        """Area method"""
-                                raise Exception('area() is not implemented')
-
-                                def integer_validator(self, name, value):
-                                            """integer_validator function"""
-                                                    if type(value) != int:
-                                                                    raise TypeError(name + ' must be an integer')
-                                                                        if value <= 0:
-                                                                                        raise ValueError(name + ' must be greater than 0')
+prevRectangle = __import__('8-rectangle').Rectangle
 
 
-                                                                                    class Rectangle(BaseGeometry):
-                                                                                            """Class BaseGeometry"""
+class Rectangle(prevRectangle):
+    """
+    Class Rectangle based in BaseGeometry and other rectangle
+    """
 
-                                                                                                def __init__(self, width, height):
-                                                                                                            """Init"""
-                                                                                                                    self.integer_validator("width", width)
-                                                                                                                            self.integer_validator("height", height)
-                                                                                                                                    self.__width = width
-                                                                                                                                            self.__height = height
+    def __init__(self, width, height):
+        """Constructor of new Retangle"""
+        self.integer_validator('width', width)
+        self.__width = width
+        self.integer_validator('height', height)
+        self.__height = height
 
-                                                                                                                                                def area(self):
-                                                                                                                                                            """Find the Area"""
-                                                                                                                                                                    return self.__width * self.__height
+    def area(self):
+        """This method return the area of the Rectangle"""
+        return self.__width * self.__height
 
-                                                                                                                                                                    def __str__(self):
-                                                                                                                                                                                """Overcharge __str__"""
-                                                                                                                                                                                        string = "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
-                                                                                                                                                                                                return string
+    def __str__(self):
+        """This method return the representation of the Rectangle"""
+        return '[Rectangle] {:d}/{:d}'.format(self.__width, self.__height)
