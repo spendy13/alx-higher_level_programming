@@ -1,4 +1,4 @@
-o#!/usr/bin/python3
+#!/usr/bin/python3
 """This module contains a class that defines a square.
 In the Square class we initialize each object by the
 __init__ method with a private instance variable called
